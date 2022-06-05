@@ -37,17 +37,17 @@ export default function SelectionUser(bodyPart) {
       let test = JSON.stringify(bodyPart)
 
       var requestOptions = {
-         method: 'POST',
+         method: 'GET',
          // headers: myHeaders,
          // body: urlencoded,
          // redirect: 'follow'
-         body: test,
+         // body: test,
          credentials: "include",
       }
-      fetch("http://localhost:1235/api/sport/", requestOptions)
+      fetch("http://localhost:1235/api/sport", requestOptions)
          // fetch("http://localhost:1235/api/sport/", requestOptions)
          .then((response) => {
-            // console.log(response)
+            console.log(response)
             console.log(formik.values.sportSelect)
 
             if (response.status == 200) {

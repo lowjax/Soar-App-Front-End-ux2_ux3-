@@ -12,7 +12,7 @@ import SelectionAdmin from "./SelectionAdmin"
 // const email = localStorage.getItem("email")
 // console.log(email)
 
-//   fetch(`https://soar-backend.herokuapp.com0/api/users/${email}`)
+//   fetch(`http://soar-backend.herokuapp.com0/api/users/${email}`)
 //   .then((response) => response.json())
 //   .then(data => {
 //     console.log(data)
