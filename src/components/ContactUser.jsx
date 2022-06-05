@@ -1,5 +1,10 @@
 import React from "react"
 import NavbarUser from "./NavbarUser"
+import FontAwesome from "react-fontawesome"
+import {MdEmail} from "react-icons/md"
+import {AiFillMessage} from "react-icons/ai"
+import {AiFillStar} from "react-icons/ai"
+import { useState, useEffect } from "react"
 
 export default function ContactUser() {
    return (

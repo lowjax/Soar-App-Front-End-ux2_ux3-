@@ -4,6 +4,8 @@ import React from "react"
 import { useState } from "react"
 import { useCookies } from "react-cookie"
 
+
+
 // admin imports
 // import { MyUserForm } from "./components/MyUserForm"
 // import { Button } from "react-bootstrap"
@@ -14,6 +16,8 @@ import FavoritesAdmin from "./components/FavoritesAdmin"
 import IndexAdmin from "./components/IndexAdmin"
 import LogoutAdmin from "./components/LogoutAdmin"
 import SelectionAdmin from "./components/SelectionAdmin"
+import AdminUserCRUD from "./components/AdminUserCRUD"
+import SportCRUD from "./components/SportCRUD"
 
 // theme component
 import ThemeUser from "./components/ThemeUser"
@@ -26,7 +30,9 @@ import CreateAccountUser from "./components/CreateAccountUser"
 import FavoritesUser from "./components/FavoritesUser"
 import ContentListUser from "./components/ContentListUser"
 import IndexUser from "./components/IndexUser"
-import SelectionUser from "./components/SelectionUser"
+import SportFilter from "./components/SportFilter"
+import InjuryFilter from "./components/InjuryFilter"
+
 import LogoutUser from "./components/LogoutUser"
 
 // import images
@@ -65,6 +71,9 @@ export const App = () => {
    const [isLoading, setIsLoading] = React.useState(false)
    const [lightMode, setLightMode] = React.useState(false)
 
+
+   
+
    // useEffect here runs everytime a component loads or theme is changed
    // and checks which theme to style with based on whats set in localStorage
 
@@ -98,7 +107,8 @@ export const App = () => {
             <Routes>
                <Route path="*" element={<Login />} />
                <Route path="/IndexUser" element={<IndexUser />} />
-               <Route path="/SelectionUser" element={<SelectionUser />} />
+               <Route path="/SportFilter" element={<SportFilter />} />
+               <Route path="/InjuryFilter" element={<InjuryFilter />} />
                <Route path="/ContentListUser" element={<ContentListUser />} />
                <Route path="/ContactUser" element={<ContactUser />} />
                <Route path="/FavoritesUser" element={<FavoritesUser />} />
@@ -106,6 +116,8 @@ export const App = () => {
                <Route path="/LogoutUser" element={<LogoutUser />} />
                <Route path="/CreateAccountUser" element={<CreateAccountUser />} />
 
+               <Route path="/SportCRUD" element={<SportCRUD />} />
+               <Route path="/AdminUserCRUD" element={<AdminUserCRUD />} />
                <Route path="/IndexAdmin" element={<IndexAdmin />} />
                <Route path="/SelectionAdmin" element={<SelectionAdmin />} />
                <Route path="/ContentcontainerAdmin" element={<ContentcontainerAdmin />} />
