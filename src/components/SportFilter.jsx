@@ -16,7 +16,7 @@ export default function SelectionUser(bodyPart) {
    const [loading, setLoading] = useState(false)
    const [error, setError] = useState(null)
    const [sportSelect, setSport] = useState("")
-  
+
 
    let formik = useFormik({
       initialValues: {
@@ -33,9 +33,9 @@ export default function SelectionUser(bodyPart) {
 
       var myHeaders = new Headers()
       myHeaders.append("Content-Type", "application/json", "Access-Control-Allow-Origin", "*")
-      
+
       let test = JSON.stringify(bodyPart)
-      
+
       var requestOptions = {
          method: 'POST',
          // headers: myHeaders,
@@ -44,17 +44,16 @@ export default function SelectionUser(bodyPart) {
          body: test,
          credentials: "include",
       }
-
-
       fetch("http://localhost:1235/api/sport/", requestOptions)
-         // fetch("https://soar-backend.herokuapp.com0/api/sport/", requestOptions)
+         // fetch("http://localhost:1235/api/sport/", requestOptions)
          .then((response) => {
-            console.log(response)
+            // console.log(response)
             console.log(formik.values.sportSelect)
 
             if (response.status == 200) {
                setSport(response)
                console.log(setSport)
+               
 
                alert("Success! have selected sport of aquired injury.")
                setOpenModal(true)
@@ -78,18 +77,18 @@ export default function SelectionUser(bodyPart) {
          .finally(() => {
             setLoading(true)
          })
-   
+ 
    }
    //
    useEffect(() => {}, [])
+
    console.log(formik.values.sportSelect)
+
    return (
       <>
       {!openModal && (
       <div>
-         
          <NavbarUser />
-         
          {loading && <Spinner animation="border" />}
          {error && <div>{`There is a problem fetching the post data - ${error}`}</div>}
          <div id="carousellContainer">
@@ -142,18 +141,17 @@ export default function SelectionUser(bodyPart) {
                </div>
             </form>
          </div>
-        
+       
          <div id="selectionContainer">
-           
+         
             <button className="btn btn-primary" id="fixMeButton" type="button" onClick={filterContent}>
                FIX ME
             </button>
            
          </div>
       </div>
-   )}
-    {openModal && <InjuryFilter bodyPart={formik.values.sport} />}
+      )}
+      {openModal && <InjuryFilter bodyPart={formik.values.sport} />}
       </>
    )
 }
-

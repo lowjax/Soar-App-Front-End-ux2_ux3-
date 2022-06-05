@@ -19,8 +19,8 @@ export default function LogoutUser() {
          credentials: "include",
       }
       console.log("Before Fetch")
-
-      fetch("https://soar-backend.herokuapp.com0/api/users/logout", requestOptions)
+      
+      fetch("http://localhost:1235/api/users/logout", requestOptions)
          // .then((response) => response.json())
          // .then(result => console.log(result))
          // .catch(error => console.log('error', error));

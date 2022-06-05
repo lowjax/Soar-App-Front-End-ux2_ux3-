@@ -48,7 +48,7 @@ export default function LogoutUser() {
       e.preventDefault()
       console.log("You clicked submit.")
 
-      fetch("https://soar-backend.herokuapp.com0/api/users/logout", {
+      fetch("http://localhost:1235/api/users/logout", {
          method: "POST",
       })
          .then((response) => response.json())

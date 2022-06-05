@@ -40,7 +40,7 @@ export default function ContentListUser() {
          {loading && <Spinner animation="border" />}
 
          {content ?
-                  this.map(item => (
+                  content.map(item => (
                      <div class="card">
                         <div className="card-body" id="contentCard" key={item.ID}>
                            
