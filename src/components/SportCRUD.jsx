@@ -7,11 +7,6 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 
 
-// axios.defaults.withCredentials = true
-
-
-
-
 export default function SportCRUD() {
         const [loading, setLoading] = useState(false)
         const [error, setError] = useState(null)
@@ -39,18 +34,6 @@ export default function SportCRUD() {
                console.log(error)
             })
 
-
-
-               // .get("/api/sport")
-               // .then((response) => {
-               //    console.log(1, response)
-               //    // console.log(1, response.data[0])
-               //    setSport(response.data)
-               // })
-               // .catch(function (error) {
-               //    // handle error
-               //    console.log(error)
-               // })
 
 
 
@@ -167,8 +150,13 @@ export default function SportCRUD() {
                       <input type="text" name="" value={item.sport}/>
                       <input type="text" name="" value={item.desc}/>
 
-                      <button className="btn btn-primary" id="favoritesButton" type="button"
+                      {/* <button className="btn btn-primary" id="favoritesButton" type="button"
                       onClick={()=>{updateSport(desc.desc, sport.sport,)}}>
+                        Update
+                      </button> */}
+
+                      <button className="btn btn-primary" id="favoritesButton" type="button"
+                      onClick={()=>{updateSport(desc.desc,)}}>
                         Update
                       </button>
 
