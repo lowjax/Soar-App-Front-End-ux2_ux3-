@@ -162,11 +162,9 @@ function updateUser(email) {
                            <button onClick={()=>{deleteUser(users.email)}}>
                               Delete
                            </button>
-                           {/* <button onClick={(params) => {
-                              setEmail(params.rows.email);deleteUser()
-                              }}>
-                              DELETE
-                           </button> */}
+                          
+
+                          
                         </div>
                      </div>
                   ))}

@@ -1,11 +1,13 @@
 import React from "react"
 import NavbarUser from "./NavbarUser"
 import BodyDiagram from "../images/BodyDiagram.svg"
+import HelpPage from "./HelpPage"
 import { useFormik } from "formik"
 import SportFilter from "./SportFilter"
 import { Spinner } from "react-bootstrap"
 import { useState, useEffect } from "react"
 import {BiHelpCircle} from "react-icons/bi"
+import { Link } from "react-router-dom"
 
 // import SportFilter from "/.SportFilter"
 
@@ -81,7 +83,12 @@ export default function IndexUser() {
                {loading && <Spinner animation="border" />}
                {error && <div>{`There is a problem fetching the post data - ${error}`}</div>}
                <div id="bodyDigramContainer">
-               <div className="help-circle"><BiHelpCircle /></div>
+               <div className="help-circle">
+                  <Link className="nav-link text-center" as={Link} to="/HelpPage" element={HelpPage}>
+                  <BiHelpCircle />
+                  </Link>
+
+               </div>
                   <img id="bodyDiagram" src={BodyDiagram} height={40} />
                </div>
                <div id="bodDiagramText">
