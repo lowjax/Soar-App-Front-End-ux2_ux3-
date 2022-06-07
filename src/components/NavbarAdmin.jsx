@@ -43,6 +43,10 @@ export default function NavbarAdmin() {
                      Edit Sport
                      </Link>
 
+                     <Link className="nav-link text-center" as={Link} to="/CreateSport" element={CreateSport}>
+                     Create Sport
+                     </Link>
+
 
                      <Link className="nav-link text-center" as={Link} to="/IndexAdmin" element={IndexAdmin}>
                         Index Admin
