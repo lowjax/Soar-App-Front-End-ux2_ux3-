@@ -12,6 +12,7 @@ import SoarLogo from "../images/SoarLogo.svg"
 import ThemeAdmin from "./ThemeAdmin"
 import AdminUserCRUD from"./AdminUserCRUD"
 import SportCRUD from "./SportCRUD"
+import CreateSport from "./CreateSport"
 
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"

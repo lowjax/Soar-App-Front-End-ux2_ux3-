@@ -14,7 +14,7 @@ import { Link } from "react-router-dom"
 
 
 
-export default function createSport() {
+export default function CreateSport() {
   
   
     const [sport, setSport] = useState("")
