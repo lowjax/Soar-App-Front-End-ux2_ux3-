@@ -18,6 +18,7 @@ import LogoutAdmin from "./components/LogoutAdmin"
 import SelectionAdmin from "./components/SelectionAdmin"
 import AdminUserCRUD from "./components/AdminUserCRUD"
 import SportCRUD from "./components/SportCRUD"
+import CreateSport from "./CreateSport"
 
 // theme component
 import ThemeUser from "./components/ThemeUser"
@@ -128,6 +129,8 @@ export const App = () => {
                <Route path="/LogoutAdmin" element={<LogoutAdmin />} />
                <Route path="/ThemeAdmin" element={<ThemeAdmin />} />
                <Route path="/CreateAccountAdmin" element={<CreateAccountAdmin />} />
+               <Route path="/CreateSport" element={<CreateSport />} />
+
             </Routes>
          </div>
 

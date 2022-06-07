@@ -16,9 +16,46 @@ import { Link } from "react-router-dom"
 export default function createSport() {
   
   
+    const [sport, setSport] = useState("")
 
- 
+    // Change values based on event, the event being the form input
+    const onChangeSport = (e) => {
+       const sport = e.target.value
+       setSport(sport)
+    }
+  
 
+    function createSport(event) {
+        event.preventDefault()
+        var myHeaders = new Headers()
+        myHeaders.append("Content-Type", "application/json")
+  
+        var requestOptions = {
+           method: "POST",
+           headers: myHeaders,
+           body: JSON.stringify({ sport: sport }),
+           // redirect: 'follow'
+           credentials: "include",
+        }
+
+        fetch("/api/sport/create", requestOptions)
+        .then((response) => {
+           if (response.status == 200) {
+              console.log(response)
+              alert("Success! You have now created a sport.")
+
+              window.location.href = "CreateSport"
+              return
+           }
+          
+        })
+        .catch((e) => {
+            // console.log(bodyContent)
+            console.log(e)
+            alert("Sorry, something isn't right")
+            return
+         })
+   }
   
    return (
     <div>
@@ -30,10 +67,22 @@ export default function createSport() {
                      <h1>add Sport</h1>
                  </div>
                  <div className="sport-input">
-                        <input type="text" />
+                        <input type="text" 
+                        placeholder="sport"
+                        pattern="[A-Za-z0-9\-_\.\@]{4,20}" title="Four or more characters"
+                        required="[A-Za-z0-9\-_\.\@]{4,20}"
+                        value={sport}
+                        onChange={onChangeSport}
+                        />
                  </div>
                  <div className="add-sport-button">
-                     <button>
+                     <button
+                     className="btn btn-light submit-button"
+                     type="button"
+                     id="createSport"
+                    
+                     onClick={createSport}
+                     >
                          Create Sport
                      </button>
 
