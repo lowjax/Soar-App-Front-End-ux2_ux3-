@@ -32,6 +32,7 @@ import ContentListUser from "./components/ContentListUser"
 import IndexUser from "./components/IndexUser"
 import SportFilter from "./components/SportFilter"
 import InjuryFilter from "./components/InjuryFilter"
+import HelpPage from "./components/HelpPage"
 
 import LogoutUser from "./components/LogoutUser"
 
@@ -52,6 +53,7 @@ import "../src/css/Navigation-Clean.css"
 import "../src/css/Pretty-Registration-Form.css"
 import "../src/css/styles.css"
 import "../src/css/bootstrap.min.css"
+
 
 //js imports
 import "bootstrap/dist/js/bootstrap.min.js"
@@ -115,6 +117,7 @@ export const App = () => {
                <Route path="/ThemeUser" element={<ThemeUser />} />
                <Route path="/LogoutUser" element={<LogoutUser />} />
                <Route path="/CreateAccountUser" element={<CreateAccountUser />} />
+               <Route path="/HelpPage" element={<HelpPage />} />
 
                <Route path="/SportCRUD" element={<SportCRUD />} />
                <Route path="/AdminUserCRUD" element={<AdminUserCRUD />} />
