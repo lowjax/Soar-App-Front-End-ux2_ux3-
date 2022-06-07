@@ -19,10 +19,6 @@ export default function UserCRUD() {
 
     const [user_status, setStatus] = useState({})
     let status=({user_status:user_status})
-
-
-
-    
     
 
     useEffect(() => {

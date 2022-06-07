@@ -58,7 +58,7 @@ export default function SportCRUD() {
                // // redirect: 'follow'
                credentials: "include",
             }
-              fetch("/api/users/delete", requestOptions)
+              fetch("api/sport/delete", requestOptions)
             //   console.log(requestOptions, data)
               .then((response) => {
                console.log(response)
@@ -127,7 +127,7 @@ export default function SportCRUD() {
          alert("Sorry, something isn't right")
          //return;
       })
-
+   }
          // update sport end
 
          
@@ -161,11 +161,18 @@ export default function SportCRUD() {
                       </button>
 
                       
-                      <button className="btn btn-primary" id="favoritesButton" type="button"
+                      <button type="button" className="btn btn-primary"
+                      onClick={()=>{deleteSport(sport.sport)}}>
+                         Delete
+
+                      </button>
+
+
+                      {/* <button className="btn btn-primary" id="favoritesButton" type="button"
                       onClick={()=>{deleteSport(sport.sport)}}
                       >
                          Delete
-                      </button>
+                      </button> */}
                   </form>
                  
                 
@@ -175,4 +182,4 @@ export default function SportCRUD() {
 
         </div>
      )
-}}
+}
