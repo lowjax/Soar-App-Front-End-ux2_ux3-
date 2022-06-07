@@ -8,6 +8,7 @@ import { Spinner } from "react-bootstrap"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 
+
 // import SportFilter from "/.SportFilter"
 
 
@@ -69,7 +70,8 @@ export default function createSport() {
                  <div className="sport-input">
                         <input type="text" 
                         placeholder="sport"
-                        pattern="[A-Za-z0-9\-_\.\@]{4,20}" title="Four or more characters"
+                        pattern="[A-Za-z0-9\-_\.\@]{4,20}" 
+                        title="Four or more characters"
                         required="[A-Za-z0-9\-_\.\@]{4,20}"
                         value={sport}
                         onChange={onChangeSport}
