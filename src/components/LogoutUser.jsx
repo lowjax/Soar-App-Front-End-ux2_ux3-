@@ -1,5 +1,5 @@
 import React from "react"
-import NavbarUser from "./NavbarUser"
+import NavbarAdmin from "./NavbarAdmin"
 import { useState } from "react"
 
 export default function LogoutUser() {
@@ -19,8 +19,8 @@ export default function LogoutUser() {
          credentials: "include",
       }
       console.log("Before Fetch")
-
-      fetch("http://localhost:1235/api/users/logout", requestOptions)
+      
+      fetch("/api/users/logout", requestOptions)
          // .then((response) => response.json())
          // .then(result => console.log(result))
          // .catch(error => console.log('error', error));
@@ -48,7 +48,7 @@ export default function LogoutUser() {
       e.preventDefault()
       console.log("You clicked submit.")
 
-      fetch("http://localhost:1235/api/users/logout", {
+      fetch("/api/users/logout", {
          method: "POST",
       })
          .then((response) => response.json())
@@ -57,7 +57,7 @@ export default function LogoutUser() {
 
    return (
       <div>
-         <NavbarUser />
+         <NavbarAdmin/>
          <div id="logoutDiv">
             <h1 id="logoutHeader">LOGOUT</h1>
             <p id="logoutParagraph">

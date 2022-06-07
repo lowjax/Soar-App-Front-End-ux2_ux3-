@@ -42,7 +42,7 @@ export default function CreateAccountUser() {
          credentials: "include",
       }
 
-      fetch("http://localhost:1235/api/users/create", requestOptions)
+      fetch("/api/users/create", requestOptions)
          .then((response) => {
             if (response.status == 200) {
                console.log(response)

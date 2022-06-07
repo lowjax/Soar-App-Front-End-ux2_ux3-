@@ -44,8 +44,8 @@ export default function SelectionUser(bodyPart) {
          // body: test,
          credentials: "include",
       }
-      fetch("http://localhost:1235/api/sport", requestOptions)
-         // fetch("http://localhost:1235/api/sport/", requestOptions)
+      fetch("/api/sport", requestOptions)
+         // fetch("/api/sport/", requestOptions)
          .then((response) => {
             console.log(response)
             console.log(formik.values.sportSelect)

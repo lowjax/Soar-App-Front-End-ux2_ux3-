@@ -26,7 +26,8 @@ export default function UserCRUD() {
     
 
     useEffect(() => {
-           fetch("http://localhost:1235/api/users", {
+           fetch("/api/users", {
+              method: "GET",
             credentials: "include",
            })
            .then((res) => res.json())
@@ -64,7 +65,7 @@ function deleteUser(email) {
       // // redirect: 'follow'
       credentials: "include",
    }
-     fetch("http://localhost:1235/api/users/delete", requestOptions)
+     fetch("/api/users/delete", requestOptions)
    //   console.log(requestOptions, data)
      .then((response) => {
       console.log(response)
@@ -113,7 +114,7 @@ function updateUser(email) {
       credentials: "include",
    }
   
-     fetch("http://localhost:1235/api/users/update", requestOptions)
+     fetch("/api/users/update", requestOptions)
    //   console.log(requestOptions, data)
      .then((response) => {
       console.log(response)
@@ -138,7 +139,7 @@ function updateUser(email) {
     return (
         <div>
             <NavbarAdmin />
-            
+            {console.log(User)}
             {User &&
                   User.map(users => (
                      <div class="card">

@@ -18,7 +18,7 @@ export default function SelectionUser(bodyPart) {
 
    let formik = useFormik({
       initialValues: {
-         setInJury: "",
+         injurySelect: "",
       },
       // validationSchema: validateFields,
       // onSubmit: (values) => {
@@ -27,7 +27,7 @@ export default function SelectionUser(bodyPart) {
    })
 
    function filterContent() {
-      console.log(setInjury)
+      console.log(injury)
 
       var myHeaders = new Headers()
       myHeaders.append("Content-Type", "application/json", "Access-Control-Allow-Origin", "*")
@@ -40,10 +40,10 @@ export default function SelectionUser(bodyPart) {
          credentials: "include",
       }
 
-      fetch("http://localhost:1235/api/injury" + sportSelect, requestOptions)
+      fetch("/api/injury" + sportSelect, requestOptions)
          .then((response) => {
             console.log(response)
-            console.log(formik.values.setInjury)
+            console.log(formik.values.injurySelect)
             
             
             if (response.status == 200) {
@@ -74,7 +74,7 @@ export default function SelectionUser(bodyPart) {
    }
    //
    useEffect(() => {}, [])
-   console.log(formik.values.setInJury)
+   console.log(formik.values.injurySelect)
 
    return (
       <>
@@ -120,9 +120,9 @@ export default function SelectionUser(bodyPart) {
                   <label>SELECT INJURY TYPE</label>
                   <select
                      className="form-control"
-                     name="sportSelect"
+                     name="injurySelect"
                      onChange={formik.handleChange}
-                     value={formik.values.sportSelect}
+                     value={formik.values.injurySelect}
                      onBlur={formik.handleBlur}>
                      <option>---</option>
                      <option value="Sprain">SPRAIN</option>
@@ -141,7 +141,7 @@ export default function SelectionUser(bodyPart) {
          </div>
       </div>
    )}
-    {openModal && <ContentListUser bodyPart={formik.values.content} />}
+    {openModal && <ContentListUser bodyPart={formik.values.content} injuryType={formik.values.injurySelect}/>}
 
 </>
    )

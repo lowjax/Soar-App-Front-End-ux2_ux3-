@@ -38,8 +38,8 @@ export default function SelectionUser(bodyPart) {
          // redirect: 'follow'
          credentials: "include",
       }
-      fetch("http://localhost:1235/api/sport/" + bodyPart.bodyPart, requestOptions)
-         // fetch("http://localhost:1235/api/sport/", requestOptions)
+      fetch("/api/sport/" + bodyPart.bodyPart, requestOptions)
+         // fetch("/api/sport/", requestOptions)
          .then((response) => {
             console.log(response)
             if (response.status == 200) {
@@ -57,8 +57,8 @@ export default function SelectionUser(bodyPart) {
             alert("Sorry, something isn't right")
             //return;
          })
-      fetch("http://localhost:1235/api/injury" + sportSelect, requestOptions)
-         // fetch("http://localhost:1235/api/injury", requestOptions)
+      fetch("/api/injury" + sportSelect, requestOptions)
+         // fetch("/api/injury", requestOptions)
          .then((response) => {
             console.log(response)
             if (response.status == 200) {

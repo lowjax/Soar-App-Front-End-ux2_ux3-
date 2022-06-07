@@ -50,7 +50,7 @@ export default function IndexAdmin() {
          // redirect: 'follow'
          credentials: "include",
       }
-      fetch("http://localhost:1235/api/body", requestOptions)
+      fetch("/api/body", requestOptions)
          .then((response) => {
             console.log(response)
             console.log(formik.values.bodyPart)
