@@ -15,7 +15,9 @@ export default function ContentListUser(injuryType) {
    const [loading, setLoading] = useState(false)
    const [error, setError] = useState(null)
    const [content, setContent] = useState([])
-   console.log(injuryType)
+   // const [injuryType, setInjuryType] = useState({})
+   
+   console.log(injuryType.injuryType)
    // const filteredInjury = item.filter((i) => {
    //    return i.injury.includes(injuryType)
    // })
@@ -77,20 +79,37 @@ export default function ContentListUser(injuryType) {
    // })
    }, [])
    console.log(2, content)
+   const filterContent = content.filter(item => {
+      return item.injury == injuryType.injuryType
+   })
+   console.log(filterContent)
+
+   // let object;
+
+   // for (let i of content) {
+   //    console.log(5, i)
+   //    object = i.filter(item => {
+   //       return item.injury == injuryType
+   //    })
+   // }
+
+   // console.log(6, object)
   
 
    return (
       <div>
          <NavbarUser />
          {loading && <Spinner animation="border" />}
-         {content &&
-                  content.map(item => {
-                     console.log(item.injury)
-                     }
-                  )}
-
+         
          {/* {content &&
-                  content.map(item => (
+                  content.filter(content => content.includes(injuryType).map(injuryType => {injuryType}
+                     // console.log(item.injury)
+                  )
+                  )} */}
+                  
+
+         {filterContent &&
+                  filterContent.map(item => (
                      <div class="card">
                         <div className="card-body" id="contentCard" key={item.ID}>
                            
@@ -104,7 +123,7 @@ export default function ContentListUser(injuryType) {
                          
                         </div>
                      </div>
-                  )) } */}
+                  )) }
          
          
       </div>

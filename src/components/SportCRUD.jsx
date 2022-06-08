@@ -16,6 +16,9 @@ export default function SportCRUD() {
         const [desc, setDesc] = useState("")
         let data=({desc:desc})
 
+      //   const [Sport, setsport] = useState({})
+      //   let data=({sport:Sport})
+
 
         useEffect(() => {
       
@@ -47,23 +50,40 @@ export default function SportCRUD() {
          //delete sport start 
 
          function deleteSport(sport) {
-            console.log(sport)
-            var requestOptions = {
+            // console.log(sport)
+            // var requestOptions = {
+            //    method: 'DELETE',
+            //    // headers: myHeaders,
+            //    headers: {
+            //       'Content-Type': "application/json"
+            //    },
+            //    body: JSON.stringify({sport: sport}),
+            //    // // redirect: 'follow'
+            //    credentials: "include",
+            // }
+            console.log(1, sport)
+
+
+            var requestOptions ={
                method: 'DELETE',
-               // headers: myHeaders,
                headers: {
                   'Content-Type': "application/json"
                },
+
                body: JSON.stringify({sport: sport}),
-               // // redirect: 'follow'
                credentials: "include",
             }
+
+
+console.log(requestOptions)
+
+
               fetch("api/sport/delete", requestOptions)
             //   console.log(requestOptions, data)
               .then((response) => {
-               console.log(response)
+               console.log(2, response)
                if (response.status == 200) {
-                  console.log(response)
+                  console.log(3, response)
          
                   alert("Success! You have deleted a sport")
                   // setOpenModal(true)
@@ -73,7 +93,7 @@ export default function SportCRUD() {
             })
             .catch((e) => {
                // console.log(bodyContent);
-               console.log(e)
+               console.log(4, e)
                alert("Sorry, something isn't right")
                //return;
             })
@@ -156,13 +176,13 @@ export default function SportCRUD() {
                       </button> */}
 
                       <button className="btn btn-primary" id="favoritesButton" type="button"
-                      onClick={()=>{updateSport(desc.desc,)}}>
+                      onClick={()=>{updateSport(desc.desc)}}>
                         Update
                       </button>
 
                       
-                      <button type="button" className="btn btn-primary"
-                      onClick={()=>{deleteSport(sport.sport)}}>
+                      <button type="button" className="btn btn-primary" key={sport.sport}
+                      onClick={()=>{deleteSport(sport)}}>
                          Delete
 
                       </button>

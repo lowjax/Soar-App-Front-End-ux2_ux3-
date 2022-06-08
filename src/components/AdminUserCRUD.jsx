@@ -19,6 +19,8 @@ export default function UserCRUD() {
 
     const [user_status, setStatus] = useState({})
     let status=({user_status:user_status})
+
+
     
 
     useEffect(() => {
@@ -95,7 +97,7 @@ var myHeaders = new Headers()
       // }
    
 }
-function updateUser(email) {
+function updateUser(user_status) {
 
    console.log(email)
    var requestOptions = {
