@@ -97,16 +97,17 @@ var myHeaders = new Headers()
       // }
    
 }
-function updateUser(user_status) {
+function updateUser(user_status, emails) {
 
-   console.log(email)
+   console.log(7, user_status)
+   console.log(8, emails)
    var requestOptions = {
-      method: 'PATCH',
+      method: 'PUT',
       // headers: myHeaders,
       headers: {
          'Content-Type': "application/json"
       },
-      body: JSON.stringify({user_status: user_status, email: email}),
+      body: JSON.stringify({user_status: user_status, email: emails}),
      
       // // redirect: 'follow'
       credentials: "include",
@@ -149,12 +150,14 @@ function updateUser(user_status) {
                            <p className="card-text">{users.phone}</p>
                            <p className="card-text">{users.date_joined}</p>
                            <p className="card-text">{users.user_status}</p>
-                           <select name="" id="" value={users.user_status}>
+                           <select name="user_status" id="user_status" value={users.user_status} onChange={(event) => setStatus(event.target.value)}>
                               <option value="admin">Admin</option>
-                              <option value="general">Genreal</option>
+                              <option value="general">General</option>
                            </select>
                            <button className="btn btn-primary" id="favoritesButton" type="button"
-                           onClick={()=>{updateUser(users.user_status)}}>
+                           onClick={()=>{
+                              updateUser(user_status, users.email)
+                              }}>
                               UPDATE
                            </button>
                            <button onClick={()=>{deleteUser(users.email)}}>

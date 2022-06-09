@@ -4,7 +4,6 @@ import SoarLogo from "../images/SoarLogo.svg"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { Spinner } from "react-bootstrap"
 import { useState, useEffect } from "react"
-import axios from "axios"
 
 
 export default function SportCRUD() {
@@ -117,7 +116,7 @@ console.log(requestOptions)
    
       console.log(sport)
       var requestOptions = {
-         method: 'PATCH',
+         method: 'PUT',
          // headers: myHeaders,
          headers: {
             'Content-Type': "application/json"
@@ -181,7 +180,7 @@ console.log(requestOptions)
                       </button>
 
                       
-                      <button type="button" className="btn btn-primary" key={sport.sport}
+                      <button type="button" className="btn btn-primary"
                       onClick={()=>{deleteSport(sport)}}>
                          Delete
 
