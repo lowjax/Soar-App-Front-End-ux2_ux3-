@@ -17,17 +17,7 @@ export default function CreateAccountUser() {
       setPassword(password)
    }
 
-   // const createUser = (event) => {
-
-   //   event.preventDefault()
-   //   var myHeaders = new Headers();
-   //   myHeaders.append("Content-Type", "application/json");
-
-   //   let please = JSON.stringify({
-   //     email: email,
-   //     password: password
-   // })
-   // let urlencoded = please
+  
 
    function createUser(event) {
       event.preventDefault()
@@ -124,8 +114,8 @@ export default function CreateAccountUser() {
                            type="email"
                            name="email"
                            placeholder="Email"
-                           pattern="[A-Za-z0-9\-_\.\@]{4,20}" title="Four or more characters"
-                           required="[A-Za-z0-9\-_\.\@]{4,20}"
+                           // pattern="[A-Za-z0-9\-_\.\@]{4,20}" title="Four or more characters"
+                           required
                            value={email}
                            onChange={onChangeEmail}
                         />
@@ -173,10 +163,10 @@ export default function CreateAccountUser() {
                   </div>
                   <button
                      className="btn btn-light submit-button"
-                     type="button"
+                     type="submit"
                      id="submitFormButton"
                      data-bs-target="../access/login.html"
-                     onClick={createUser}>
+                     onSubmit={createUser}>
                      Create Account
                   </button>
                </form>
