@@ -89,8 +89,7 @@ export default function CreateAccountUser() {
                            for="name-input-field"
                           pattern="[A-Za-z0-9\-_\.\@]{4,20}" 
                           title="two or more characters"
-                          required
-                          minLength={2}
+                          required   
                         />
                      </div>
                      <div className="col">
