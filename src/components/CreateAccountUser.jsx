@@ -62,7 +62,7 @@ export default function CreateAccountUser() {
             <div className="col-md-8 offset-md-2">
                <form
                   className="custom-form"
-                  //  onSubmit={createUser}
+                   onSubmit={createUser}
                >
                   <img src={SoarLogo} height={40} />
                   <h1>Create Account</h1>
@@ -166,7 +166,8 @@ export default function CreateAccountUser() {
                      type="submit"
                      id="submitFormButton"
                      data-bs-target="../access/login.html"
-                     onSubmit={createUser}>
+                     // onSubmit={createUser}
+                     >
                      Create Account
                   </button>
                </form>
