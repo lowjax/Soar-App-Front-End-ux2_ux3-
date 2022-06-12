@@ -7,6 +7,8 @@ import { useState } from "react"
 export default function CreateAccountUser() {
    const [email, setEmail] = useState("")
    const [password, setPassword] = useState("")
+   const [firstName, setFirstName] = useState("")
+   const [lastName, setLastName] = useState("")
    // Change values based on event, the event being the form input
    const onChangeEmail = (e) => {
       const email = e.target.value
@@ -16,6 +18,17 @@ export default function CreateAccountUser() {
       const password = e.target.value
       setPassword(password)
    }
+
+   const onChangeFirstName = (e) => {
+      const firstName = e.target.value
+      setFirstName(firstName)
+   }
+
+   const onChangeLastName = (e) => {
+      const lastName = e.target.value
+      setLastName(lastName)
+   }
+
 
   
 
@@ -27,7 +40,7 @@ export default function CreateAccountUser() {
       var requestOptions = {
          method: "POST",
          headers: myHeaders,
-         body: JSON.stringify({ email: email, password: password }),
+         body: JSON.stringify({ email: email, password: password, first_name: firstName, last_name: lastName }),
          // redirect: 'follow'
          credentials: "include",
       }
@@ -74,6 +87,8 @@ export default function CreateAccountUser() {
                      </div>
                      <div className="col-sm-6 input-column">
                         <input
+                        value={firstName}
+                        onChange={onChangeFirstName}
                            className="form-control"
                            type="text"
                            for="name-input-field"
@@ -91,6 +106,8 @@ export default function CreateAccountUser() {
                            </div>
                            <div className="col-sm-6 input-column">
                               <input
+                              value={lastName}
+                              onChange={onChangeLastName}
                                  className="form-control"
                                  type="text"
                                  for="name-input-field"
