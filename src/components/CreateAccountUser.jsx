@@ -9,6 +9,7 @@ export default function CreateAccountUser() {
    const [password, setPassword] = useState("")
    const [firstName, setFirstName] = useState("")
    const [lastName, setLastName] = useState("")
+   const [userStatus, setUserStatus] = useState("")
    // Change values based on event, the event being the form input
    const onChangeEmail = (e) => {
       const email = e.target.value
@@ -29,6 +30,13 @@ export default function CreateAccountUser() {
       setLastName(lastName)
    }
 
+   const onChangeUserStatus = (e) => {
+      const userStatus = e.target.value
+      setUserStatus(userStatus)
+   }
+
+   console.log(lastName)
+   console.log(firstName)
 
   
 
@@ -40,7 +48,7 @@ export default function CreateAccountUser() {
       var requestOptions = {
          method: "POST",
          headers: myHeaders,
-         body: JSON.stringify({ email: email, password: password, first_name: firstName, last_name: lastName }),
+         body: JSON.stringify({ email: email, password: password, first_name: firstName, last_name: lastName, user_status: userStatus}),
          // redirect: 'follow'
          credentials: "include",
       }
@@ -118,7 +126,35 @@ export default function CreateAccountUser() {
                            </div>
                         </div>
                      </div>
+
+                     {/* <div className="col"> */}
+                        {/* <div className="row form-group" >
+                           <div className="col-sm-4 label-column"> */}
+                              <label className="col-form-label" for="name-input-field">
+                                 User Status
+                              </label>
+                           </div>
+                           <div className="col-sm-6 input-column">
+                              <select
+                              value={userStatus}
+                              onChange={onChangeUserStatus}
+                                 className="form-control"
+                                 type="text"
+                                 for="name-input-field"
+                                pattern="[A-Za-z0-9\-_\.\@]{4,20}" 
+                                title="two or more characters"
+                                required> 
+                                <option> Please select</option>
+                                <option value="general"> General</option>
+                                </select>
+                           {/* </div>
+                        </div> */}
+{/* 
+                     </div> */}
                   </div>
+                  <br />
+                  <br />
+
                   <div className="row form-group">
                      <div className="col-sm-4 label-column">
                         <label className="col-form-label" for="email-input-field">
