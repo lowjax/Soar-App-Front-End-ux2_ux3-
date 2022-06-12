@@ -1,50 +1,50 @@
 import { BrowserRouter as Router, Routes, Route, Redirect } from "react-router-dom"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import React from "react"
-import { useState } from "react"
-import { useCookies } from "react-cookie"
+// import { useState } from "react"
+// import { useCookies } from "react-cookie"
 
 
 
-// admin imports
-// import { MyUserForm } from "./components/MyUserForm"
-// import { Button } from "react-bootstrap"
-import NavbarAdmin from "./components/NavbarAdmin"
-import ContentcontainerAdmin from "./components/ContentcontainerAdmin"
-import CreateAccountAdmin from "./components/CreateAccountAdmin"
-import FavoritesAdmin from "./components/FavoritesAdmin"
-import IndexAdmin from "./components/IndexAdmin"
-import LogoutAdmin from "./components/LogoutAdmin"
-import SelectionAdmin from "./components/SelectionAdmin"
-import AdminUserCRUD from "./components/AdminUserCRUD"
-import SportCRUD from "./components/SportCRUD"
-import CreateSport from "./components/CreateSport"
+// // admin imports
+// // import { MyUserForm } from "./components/MyUserForm"
+// // import { Button } from "react-bootstrap"
+// import NavbarAdmin from "./components/NavbarAdmin"
+import ContentcontainerAdmin from "./src/components/ContentcontainerAdmin"
+import CreateAccountAdmin from "./src/components/CreateAccountAdmin"
+import FavoritesAdmin from "./src/components/FavoritesAdmin"
+import IndexAdmin from "./src/components/IndexAdmin"
+import LogoutAdmin from "./src/components/LogoutAdmin"
+import SelectionAdmin from "./src/components/SelectionAdmin"
+import AdminUserCRUD from "./src/components/AdminUserCRUD"
+import SportCRUD from "./src/components/SportCRUD"
+import CreateSport from "./src/components/CreateSport"
 
 // theme component
-import ThemeUser from "./components/ThemeUser"
-import ThemeAdmin from "./components/ThemeAdmin"
+import ThemeUser from "./src/components/ThemeUser"
+import ThemeAdmin from "./src/components/ThemeAdmin"
 
 // user imports
-import ContactUser from "./components/ContactUser"
-import NavbarUser from "./components/NavbarUser"
-import CreateAccountUser from "./components/CreateAccountUser"
-import FavoritesUser from "./components/FavoritesUser"
-import ContentListUser from "./components/ContentListUser"
-import IndexUser from "./components/IndexUser"
-import SportFilter from "./components/SportFilter"
-import InjuryFilter from "./components/InjuryFilter"
-import HelpPage from "./components/HelpPage"
+import ContactUser from "./src/components/ContactUser"
+// import NavbarUser from "./components/NavbarUser"
+import CreateAccountUser from "./src/components/CreateAccountUser"
+import FavoritesUser from "./src/components/FavoritesUser"
+import ContentListUser from "./src/components/ContentListUser"
+import IndexUser from "./src/components/IndexUser"
+import SportFilter from "./src/components/SportFilter"
+import InjuryFilter from "./src/components/InjuryFilter"
+import HelpPage from "./src/components/HelpPage"
 
-import LogoutUser from "./components/LogoutUser"
+import LogoutUser from "./src/components/LogoutUser"
 
 // import images
-import BackArrow from "./images/BackArrow.svg"
-import Climbing from "./images/climbing.svg"
+// import BackArrow from "./images/BackArrow.svg"
+// import Climbing from "./images/climbing.svg"
 // import PhysioContent from "./../public/PhysioContent.svg"
-import Skateboard from "./images/skateboard.svg"
-import SoarLogo from "./images/SoarLogo.svg"
-import Surf from "./images/surf.svg"
-import BodyDiagram from "./images/BodyDiagram.svg"
+// import Skateboard from "./images/skateboard.svg"
+// import SoarLogo from "./images/SoarLogo.svg"
+// import Surf from "./images/surf.svg"
+// import BodyDiagram from "./images/BodyDiagram.svg"
 
 // css imports
 import "../src/css/style.scss"
@@ -60,7 +60,7 @@ import "../src/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
 
 import "bootstrap/dist/css/bootstrap.min.css"
-import Login from "./components/Login"
+import Login from "./src/components/Login"
 // const buttonClass = "my-3 px-3"
 
 export const App = () => {
@@ -134,29 +134,7 @@ export const App = () => {
             </Routes>
          </div>
 
-         <div>
-            {/* <Login /> */}
-
-            {/* <NavbarAdmin />
-    <CreateAccountUser />
-    <Login /> */}
-            {/* <NavbarUser /> */}
-            {/* <IndexUser /> */}
-            {/* <SelectionUser /> */}
-            {/* <ContentListUser /> */}
-            {/* <FavoritesUser /> */}
-            {/* <ContactUser /> */}
-            {/* <LogoutUser /> */}
-            {/* <ThemeUser /> */}
-
-            {/* <CreateAccountAdmin /> */}
-            {/* <IndexAdmin /> */}
-            {/* <SelectionAdmin /> */}
-            {/* <ContentcontainerAdmin /> */}
-            {/* <FavoritesAdmin /> */}
-            {/* <LogoutAdmin /> */}
-            {/* <ThemeAdmin /> */}
-         </div>
+         
       </>
    )
 }
