@@ -124,6 +124,8 @@ function updateUser(user_status, emails) {
          // setOpenModal(true)
          window.location.href = "AdminUserCRUD"
          return
+      } else {
+         console.log('bad')
       }
    })
    .catch((e) => {
