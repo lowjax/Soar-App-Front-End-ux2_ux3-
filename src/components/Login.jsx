@@ -59,7 +59,7 @@ export default function Login() {
 
       localStorage.setItem("email", email)
 
-      fetch("/api/users/login", requestOptions)
+      fetch("https://soar-backend.herokuapp.com/api/users/login", requestOptions)
          // .then(response => response.text())
          // .then(result => console.log(result))
          // .catch(error => console.log('error', error));

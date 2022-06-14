@@ -20,7 +20,7 @@ export default function LogoutUser() {
       }
       console.log("Before Fetch")
       
-      fetch("/api/users/logout", requestOptions)
+      fetch("https://soar-backend.herokuapp.com/api/users/logout", requestOptions)
          // .then((response) => response.json())
          // .then(result => console.log(result))
          // .catch(error => console.log('error', error));
@@ -48,7 +48,7 @@ export default function LogoutUser() {
       e.preventDefault()
       console.log("You clicked submit.")
 
-      fetch("/api/users/logout", {
+      fetch("https://soar-backend.herokuapp.com/api/users/logout", {
          method: "POST",
       })
          .then((response) => response.json())

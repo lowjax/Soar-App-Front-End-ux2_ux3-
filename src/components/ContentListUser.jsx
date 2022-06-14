@@ -25,7 +25,7 @@ export default function ContentListUser(injuryType) {
    
    useEffect(() => {
       // axios
-      // .get("/api/content")        
+      // .get("https://soar-backend.herokuapp.com/api/content")        
       //  .then((response) => {
       //       console.log(1, response)
       //       // console.log(1, response.data[0])
@@ -46,7 +46,7 @@ export default function ContentListUser(injuryType) {
       }
 
 
-         fetch("/api/content", requestOptions)
+         fetch("https://soar-backend.herokuapp.com/api/content", requestOptions)
    //   console.log(requestOptions, data)
          .then((response) => {
             if (response.status == 200) {

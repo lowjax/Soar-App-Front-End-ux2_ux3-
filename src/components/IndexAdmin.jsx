@@ -12,7 +12,7 @@ import SelectionAdmin from "./SelectionAdmin"
 // const email = localStorage.getItem("email")
 // console.log(email)
 
-//   fetch(`http://soar-backend.herokuapp.com0/api/users/${email}`)
+//   fetch(`http://soar-backend.herokuapp.com0https://soar-backend.herokuapp.com/api/users/${email}`)
 //   .then((response) => response.json())
 //   .then(data => {
 //     console.log(data)
@@ -50,7 +50,7 @@ export default function IndexAdmin() {
          // redirect: 'follow'
          credentials: "include",
       }
-      fetch("/api/body", requestOptions)
+      fetch("https://soar-backend.herokuapp.com/api/body", requestOptions)
          .then((response) => {
             console.log(response)
             console.log(formik.values.bodyPart)

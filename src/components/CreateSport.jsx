@@ -39,7 +39,7 @@ export default function CreateSport() {
            credentials: "include",
         }
 
-        fetch("/api/sport/create", requestOptions)
+        fetch("https://soar-backend.herokuapp.com/api/sport/create", requestOptions)
         .then((response) => {
            if (response.status == 200) {
               console.log(response)

@@ -22,7 +22,7 @@ export default function SportCRUD() {
         useEffect(() => {
       
 
-            fetch("/api/sport", {
+            fetch("https://soar-backend.herokuapp.com/api/sport", {
                method: "GET",
                credentials: "include"
             })
@@ -127,7 +127,7 @@ console.log(requestOptions)
          credentials: "include",
       }
      
-        fetch("/api/sport/update", requestOptions)
+        fetch("https://soar-backend.herokuapp.com/api/sport/update", requestOptions)
       //   console.log(requestOptions, data)
         .then((response) => {
          console.log(response)

@@ -38,8 +38,8 @@ export default function SelectionUser(bodyPart) {
          // redirect: 'follow'
          credentials: "include",
       }
-      fetch("/api/sport/" + bodyPart.bodyPart, requestOptions)
-         // fetch("/api/sport/", requestOptions)
+      fetch("https://soar-backend.herokuapp.com/api/sport/" + bodyPart.bodyPart, requestOptions)
+         // fetch("https://soar-backend.herokuapp.com/api/sport/", requestOptions)
          .then((response) => {
             console.log(response)
             if (response.status == 200) {
@@ -57,8 +57,8 @@ export default function SelectionUser(bodyPart) {
             alert("Sorry, something isn't right")
             //return;
          })
-      fetch("/api/injury" + sportSelect, requestOptions)
-         // fetch("/api/injury", requestOptions)
+      fetch("https://soar-backend.herokuapp.com/api/injury" + sportSelect, requestOptions)
+         // fetch("https://soar-backend.herokuapp.com/api/injury", requestOptions)
          .then((response) => {
             console.log(response)
             if (response.status == 200) {

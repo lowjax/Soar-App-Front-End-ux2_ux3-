@@ -40,7 +40,7 @@ export default function SelectionUser(bodyPart) {
          credentials: "include",
       }
 
-      fetch("/api/injury" + sportSelect, requestOptions)
+      fetch("https://soar-backend.herokuapp.com/api/injury" + sportSelect, requestOptions)
          .then((response) => {
             console.log(response)
             console.log(formik.values.injurySelect)

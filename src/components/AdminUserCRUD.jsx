@@ -28,7 +28,7 @@ export default function UserCRUD() {
     
 
     useEffect(() => {
-           fetch("/api/users", {
+           fetch("https://soar-backend.herokuapp.com/api/users", {
               method: "GET",
             credentials: "include",
            })
@@ -67,7 +67,7 @@ function deleteUser(email) {
       // // redirect: 'follow'
       credentials: "include",
    }
-     fetch("/api/users/delete", requestOptions)
+     fetch("https://soar-backend.herokuapp.com/api/users/delete", requestOptions)
    //   console.log(requestOptions, data)
      .then((response) => {
       console.log(response)
@@ -117,7 +117,7 @@ function updateUser(user_status, emails) {
       credentials: "include",
    }
   
-     fetch("/api/users/update", requestOptions)
+     fetch("https://soar-backend.herokuapp.com/api/users/update", requestOptions)
    //   console.log(requestOptions, data)
      .then((response) => {
       console.log(response)

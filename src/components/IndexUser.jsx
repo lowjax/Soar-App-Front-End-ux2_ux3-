@@ -41,7 +41,7 @@ export default function IndexUser() {
          // redirect: 'follow'
          credentials: "include",
       }
-      fetch("/api/body", requestOptions)
+      fetch("https://soar-backend.herokuapp.com/api/body", requestOptions)
          .then((response) => {
             console.log(response)
             console.log(formik.values.bodyPart)

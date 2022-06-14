@@ -53,7 +53,7 @@ export default function CreateAccountUser() {
          credentials: "include",
       }
 
-      fetch("/api/users/create", requestOptions)
+      fetch("https://soar-backend.herokuapp.com/api/users/create", requestOptions)
          .then((response) => {
             if (response.status == 200) {
                console.log(response)
