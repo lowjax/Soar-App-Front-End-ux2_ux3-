@@ -8,7 +8,31 @@ import NavbarUser from "./NavbarUser"
 function LeSettings() {
    const [lightMode, setLightMode] = React.useState(false)
 
+
+   // const Text = ({ children = 'Hello World!' }) => <p>{children}</p>
+
+
    window.localStorage.setItem("theme setting", lightMode)
+
+//  OOP 
+
+// class Contacts extends React.Component {
+//    constructor(props) {
+//      super(props);
+//      this.state = {
+//            message:"new message"
+//      };
+//    }
+//    render() {
+//       return (
+//         <div><Text children={this.state.message}/></div>
+//       );
+//     }
+//   };
+
+// OOP
+
+
 
    React.useEffect(() => {
       const json = localStorage.getItem("site-light-mode")

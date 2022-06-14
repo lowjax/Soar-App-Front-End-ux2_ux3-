@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, resolvePath } from "react-route
 import { useState, useEffect} from "react"
 import { Spinner } from "react-bootstrap"
 import axios from "axios"
+// import { admin } from "./OOP"
 
 
 
@@ -18,6 +19,9 @@ export default function UserCRUD() {
     let data=({email:email})
 
     const [user_status, setStatus] = useState({})
+
+
+
     let status=({user_status:user_status})
 
 

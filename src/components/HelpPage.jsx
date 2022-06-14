@@ -1,5 +1,60 @@
 import React from "react"
 import NavbarUser from "./NavbarUser"
+// import {Contacts} from "./OOP"
+
+
+
+
+class Contacts extends React.Component {
+   constructor(props) {
+     super(props);
+     this.state = {
+           message:"new message"
+     };
+   }
+   render() {
+     return (
+       <div>Thisis oop</div>
+     );
+   }
+ }
+
+
+
+               // componentDidMount(){
+               //    fetch('/api/users')
+               //    .then(response => response.json())
+               //    .then(data => this.setState({ data }));   }
+
+
+
+
+
+                  
+               // class Contacts extends React.Component {
+               // constructor(props) {
+               // super(props);
+               // this.state = {
+               //       user: [user.email]
+               // };
+               // }
+
+
+               // render() {
+               // return (
+               //    <div>
+               //    <ul>
+               //       {user.map(user => 
+               //          <li key={user.email}></li>
+               //          )}
+               //    </ul>
+               //    </div>
+               // );
+               // }
+               // }
+
+
+
 
 export default function FavoritesUser() {
    return (
@@ -21,6 +76,10 @@ export default function FavoritesUser() {
                </div>
             </div>
          </div>
+        <Contacts />
       </div>
+      
    )
 }
+
+

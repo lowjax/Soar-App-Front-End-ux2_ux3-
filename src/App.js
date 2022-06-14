@@ -5,6 +5,9 @@ import React from "react"
 // import { useCookies } from "react-cookie"
 
 
+//OOP
+import OOP from "./components/OOP"
+
 
 // // admin imports
 // // import { MyUserForm } from "./components/MyUserForm"
