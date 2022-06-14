@@ -23,7 +23,7 @@ export default function LogoutUser() {
       var requestOptions = {
          method: "POST",
          headers: myHeaders,
-         // body: urlencoded,
+         body: urlencoded,
          // redirect: "follow",
          credentials: "include",
       }
