@@ -40,6 +40,8 @@ export default function ContentListUser(injuryType) {
       var requestOptions = {
          method: 'GET',
          // headers: myHeaders,
+         headers:{"Content-Type": "applcation/json"},
+   
          
          // // redirect: 'follow'
          credentials: "include",
