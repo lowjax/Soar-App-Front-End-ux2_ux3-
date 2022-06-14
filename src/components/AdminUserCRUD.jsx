@@ -37,7 +37,7 @@ export default function UserCRUD() {
            .then((json) => {
               console.log(json)
               setUser(json)
-              console.log(user)
+              console.log(User)
            })
            .catch(function (error) {
               // handle error
