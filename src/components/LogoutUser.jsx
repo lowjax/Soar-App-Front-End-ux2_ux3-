@@ -12,18 +12,14 @@ export default function LogoutUser() {
 
 
       
-      let please = JSON.stringify({
-         email: email,
-         password: password,
-      })
-      let urlencoded = please
+    
    
      
 
       var requestOptions = {
          method: "POST",
          headers: myHeaders,
-         body: urlencoded,
+         // body: urlencoded,
          // redirect: "follow",
          credentials: "include",
       }
