@@ -35,8 +35,8 @@ export default function IndexUser() {
       myHeaders.append("Content-Type", "application/json")
 
       var requestOptions = {
-         // method: 'GET',
-         // headers: myHeaders,
+         method: 'GET',
+         headers: myHeaders,
          // body: urlencoded,
          // redirect: 'follow'
          credentials: "include",
