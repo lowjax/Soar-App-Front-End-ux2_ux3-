@@ -100,8 +100,8 @@ export default function CreateAccountUser() {
                            className="form-control"
                            type="text"
                            for="name-input-field"
-                          pattern="[A-Za-z0-9\-_\.\@]{4,20}" 
-                          title="two or more characters"
+                        //   pattern="[A-Za-z0-9\-_\.\@]{4,20}" 
+                        //   title="two or more characters"
                           required   
                         />
                      </div>
@@ -119,8 +119,8 @@ export default function CreateAccountUser() {
                                  className="form-control"
                                  type="text"
                                  for="name-input-field"
-                                pattern="[A-Za-z0-9\-_\.\@]{4,20}" 
-                                title="two or more characters"
+                              //   pattern="[A-Za-z0-9\-_\.\@]{4,20}" 
+                              //   title="two or more characters"
                                 required
                               />
                            </div>
@@ -141,8 +141,8 @@ export default function CreateAccountUser() {
                                  className="form-control"
                                  type="text"
                                  for="name-input-field"
-                                pattern="[A-Za-z0-9\-_\.\@]{4,20}" 
-                                title="two or more characters"
+                              //   pattern="[A-Za-z0-9\-_\.\@]{4,20}" 
+                              //   title="two or more characters"
                                 required> 
                                 <option> Please select</option>
                                 <option value="general"> General</option>
@@ -186,8 +186,8 @@ export default function CreateAccountUser() {
                            className="form-control"
                            type="password"
                            name="password"
-                           pattern="[A-Za-z0-9\-_\.\@]{4,20}" title="Four or more characters"
-                           // required="[A-Za-z0-9\-_\.\@]{4,20}"
+                           // pattern="[A-Za-z0-9\-_\.\@]{4,20}" title="Four or more characters"
+                           // // required="[A-Za-z0-9\-_\.\@]{4,20}"
                            required
                            placeholder="Password"
                            value={password}
