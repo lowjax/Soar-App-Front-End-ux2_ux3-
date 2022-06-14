@@ -9,6 +9,15 @@ export default function LogoutUser() {
       console.log("Something")
       var myHeaders = new Headers()
       myHeaders.append("Content-Type", "application/json")
+
+
+      
+      let please = JSON.stringify({
+         email: email,
+         password: password,
+      })
+      let urlencoded = please
+   
      
 
       var requestOptions = {
