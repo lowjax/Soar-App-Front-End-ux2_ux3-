@@ -30,6 +30,7 @@ export default function UserCRUD() {
     useEffect(() => {
            fetch("https://soar-backend.herokuapp.com/api/users", {
               method: "GET",
+              headers: {'Content-Type': 'application/json'},
             credentials: "include",
            })
            .then((res) => res.json())
