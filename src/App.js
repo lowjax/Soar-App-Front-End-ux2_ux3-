@@ -60,7 +60,7 @@ import "../src/css/bootstrap.min.css"
 
 
 //js imports
-// import "bootstrap/dist/js/bootstrap.min.js"
+import "bootstrap/dist/js/bootstrap.min.js"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import Login from "./components/Login"
