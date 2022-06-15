@@ -2,16 +2,16 @@ import React from "react"
 
 
 import LogoutAdmin from "./LogoutAdmin"
-import SelectionAdmin from "./SelectionAdmin"
+// import SelectionAdmin from "./SelectionAdmin"
 import { Link } from "react-router-dom"
 import BackAarow from "../images/BackArrow.svg"
-import IndexAdmin from "./IndexAdmin"
-import ContentcontainerAdmin from "./ContentcontainerAdmin"
-import FavoritesAdmin from "./FavoritesAdmin"
+// import IndexAdmin from "./IndexAdmin"
+// import ContentcontainerAdmin from "./ContentcontainerAdmin"
+// import FavoritesAdmin from "./FavoritesAdmin"
 import SoarLogo from "../images/SoarLogo.svg"
 import ThemeAdmin from "./ThemeAdmin"
 import AdminUserCRUD from"./AdminUserCRUD"
-import SportCRUD from "./SportCRUD"
+// import SportCRUD from "./SportCRUD"
 import CreateSport from "./CreateSport"
 
 
@@ -40,26 +40,26 @@ export default function NavbarAdmin() {
                      </Link>
 
                
-                     <Link className="nav-link text-center" as={Link} to="/SportCRUD" element={SportCRUD}>
+                     {/* <Link className="nav-link text-center" as={Link} to="/SportCRUD" element={SportCRUD}>
                      Edit Sport
-                     </Link>
+                     </Link> */}
 
                      <Link className="nav-link text-center" as={Link} to="/CreateSport" element={CreateSport}>
                      Create Sport
                      </Link>
 
-
+{/* 
                      <Link className="nav-link text-center" as={Link} to="/IndexAdmin" element={IndexAdmin}>
                         Index Admin
-                     </Link>
-
+                     </Link> */}
+{/* 
                      <Link
                         className="nav-link text-center"
                         as={Link}
                         to="/ContentcontainerAdmin"
                         element={ContentcontainerAdmin}>
                         Content
-                     </Link>
+                     </Link> */}
 
                      {/* <Link className="nav-link text-center" as={Link} to="/SelectionAdmin" element={SelectionAdmin}>
                         Filter Screen

@@ -1,7 +1,7 @@
 import React from "react"
 import ContactUser from "./ContactUser"
 import ContentListUser from "./ContentListUser"
-import FavoritesUser from "./FavoritesUser"
+// import FavoritesUser from "./FavoritesUser"
 import IndexUser from "./IndexUser"
 import Login from "./Login"
 import LogoutUser from "./LogoutUser"
@@ -44,9 +44,9 @@ export default function NavbarUser() {
                         Content
                      </Link>
 
-                     <Link className="nav-link text-center" as={Link} to="/FavoritesUser" element={FavoritesUser}>
+                     {/* <Link className="nav-link text-center" as={Link} to="/FavoritesUser" element={FavoritesUser}>
                         Favorites
-                     </Link>
+                     </Link> */}
 
                      <Link className="nav-link text-center" as={Link} to="/ContactUser" element={ContactUser}>
                         Contact User
