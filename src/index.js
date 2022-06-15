@@ -14,7 +14,7 @@ import * as serviceWorkerRegistration from "./serviceWorkerRegistration"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 // import { CookiesProvider } from "react-cookie";
 
-// const appElement = document.getElementById("app")//
+// const appElement = document.getElementById("app")
 // ReactDOM.render(<App />, appElement)
 const root = ReactDOM.createRoot(document.getElementById("App"))
 
@@ -26,7 +26,6 @@ root.render(
       <BrowserRouter>
          <Routes>
             <Route path="*" element={<App />} />
-            {/* <App /> */}
          </Routes>
       </BrowserRouter>
    </React.StrictMode>
