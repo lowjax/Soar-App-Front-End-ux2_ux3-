@@ -70,9 +70,10 @@ export default function CreateSport() {
                  <div className="sport-input">
                         <input type="text" 
                         placeholder="sport"
-                        pattern="[A-Za-z0-9\-_\.\@]{4,20}" 
+                        pattern="[A-Za-z0-9\-_\.\@]{4,20} ^[^<>]+$" 
                         title="Four or more characters"
-                        required="[A-Za-z0-9\-_\.\@]{4,20}"
+                        // required="[A-Za-z0-9\-_\.\@]{4,20} "
+                        required
                         value={sport}
                         onChange={onChangeSport}
                         />
